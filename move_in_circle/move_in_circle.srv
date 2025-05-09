@@ -1,0 +1,18 @@
+
+#!/usr/bin/env python
+import rospy
+from geometry.msgs import Twist from move_in_circle.srv import move_in_circle
+
+def h_move_in_circle(a):
+	pub = rospy.Publisher('/cmd.vel', Twist, queue_size = 10)
+	vel_msg = Twist()
+
+	linear = a.speed
+	angular = a.speed/x.radius
+
+	
+vel_msg.linear.x = linear
+vel_msg.angular.x = -angular 
+
+rate = Rospy.rate(10)
+time = rospy.Time.now()
