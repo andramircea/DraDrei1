@@ -1,0 +1,8 @@
+#goal
+std_msgs/Int32 Size
+---
+#result
+std_msgs/Float32 sec
+---
+#feedback
+std_msgs/Int32 side

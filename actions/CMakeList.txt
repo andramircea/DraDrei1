@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>actions_pkg</name>
+  <version>0.0.0</version>
+  <description>The actions_pkg package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <!-- Example:  -->
+find_package(catkin REQUIRED COMPONENTS actionlib_msgs actionlib rospy std_msgs message_generation)
+
+add_action_files(
+  DIRECTORY action
+  FILES DroneControl.action
+)
+
+generate_messages(
+  DEPENDENCIES actionlib_msgs std_msgs
+)
